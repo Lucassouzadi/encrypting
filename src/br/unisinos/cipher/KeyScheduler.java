@@ -6,7 +6,7 @@ import br.unisinos.utils.Utils;
 public class KeyScheduler {
 
     public static final byte[] INITIALIZATION_KEY = CBC.INITIALIZATION_VECTOR;
-    private static final int KEY_AMOUNT = 10;
+    private static final int KEY_AMOUNT = Properties.BLOCK_SIZE;
 
     public static byte[][] generateKeys(byte[] userKey, int keySize) {
         byte[][] keys = new byte[KEY_AMOUNT][keySize];
